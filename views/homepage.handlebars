@@ -1,24 +1,43 @@
-<!-- Loop over each object in the projects array -->
-{{#each items as |item| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{item.id}}">{{item.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount item.price}}</span>
-      needed!
-    </p>
-    <p>Created by {{item.user.name}} on {{format_date item.date_posted}}</p>
+<section class="container col-xl-10 col-xxl-8 px-4 py-5 custom-intro">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold lh-1 mb-3">BUY ... SELL ... TRADE ...</h1>
+      <p class="col-lg-10 fs-4">OCTO is a platform to buy and sell clothing. OCTO empowers fashion entrepenurs to run
+        their own business and express their creativity. Shop with us to discover cool clothing you can't find on
+        fast-fashion websites. (and hey, its good for the enviornment too.) Sign up now to start:</p>
+    </div>
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-3 bg-light">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+        <hr class="my-4">
+        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+      </form>
+    </div>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{item.description}}
-    </p>
+</section>
+
+<section>
+  {{#each items as |item| }}
+  <div class="col-md-2 column productbox">
+    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
+    <a class="producttitle" href="/item/{{item.id}}">{{item.name}}</a>
+    <div class="productprice">
+      <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-sm" role="button">BUY</a></div>
+      <div class="pricetext">{{format_amount item.price}}</div>
+    </div>
   </div>
-</div>
-{{/each}}
+  {{/each}}
+</section>
