@@ -10,4 +10,12 @@ Item.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+Comment.belongsTo(Item, {
+  foreignKey: 'item_id'
+});
+
 module.exports = { User, Item };
