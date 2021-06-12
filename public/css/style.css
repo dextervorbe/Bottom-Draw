@@ -23,6 +23,11 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+/* .input-group-rounded {
+  width: 30%;
+  border-radius: 15px;
+} */
+
 /* #login-box {
   margin: 0 auto;
 } */
