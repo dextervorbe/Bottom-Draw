@@ -26,3 +26,9 @@ header, .project:not(:last-child) {
 /* #login-box {
   margin: 0 auto;
 } */
+
+.welcome-title {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
