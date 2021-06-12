@@ -16,20 +16,20 @@
 <body>
   <nav class="navbar sticky-top navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand">OCTO</a>
+      <a class="navbar-brand" href="/">OCTO</a>
       <form class="d-flex">
         <div class="input-group input-group-rounded">
           <input class="input-group-field" type="search" placeholder="Search for items, brands, styles, ect...">
         </div>
       </form>
-      <form class="justify-content-end">
+      <div class="justify-content-end">
         {{#if logged_in}}
         <a href="/dashboard">Hi there, {{ user.name }}</a>
         <button class="btn" id="logout">logout</button>
         {{else}}
-        <button class="btn btn-outline-success me-2" type="button">Log In</button>
+        <button class="btn btn-outline-success me-2" type="button" onClick= "/login">Log In</button>
         {{/if}}
-      </form>
+      </div>
     </div>
   </nav>
 
