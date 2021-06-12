@@ -10,7 +10,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
@@ -25,9 +25,9 @@
       <div class="justify-content-end">
         {{#if logged_in}}
         <a href="/dashboard">Hi there, {{ user.name }}</a>
-        <button class="btn" id="logout">logout</button>
+        <button id="logout" class="btn" style="color: white">logout</button>
         {{else}}
-        <button class="btn btn-outline-success me-2" type="button" onClick= "/login">Log In</button>
+        <button class="btn btn-outline-success me-2" type="button" onclick= "window.location.href='/login'">Log In</button>
         {{/if}}
       </div>
     </div>
