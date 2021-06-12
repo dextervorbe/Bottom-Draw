@@ -36,7 +36,7 @@ Item.init(
       allowNull: true,
     },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(2000),
       allowNull: true,
     },
     user_id: {
