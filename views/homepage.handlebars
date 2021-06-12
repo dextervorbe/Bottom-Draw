@@ -6,14 +6,19 @@
         their own business and express their creativity. Shop with us to discover cool clothing you can't find on
         fast-fashion websites. (and hey, its good for the enviornment too.) Sign up now to start:</p>
     </div>
+
     <div class="col-md-10 mx-auto col-lg-5">
       <form class="p-4 p-md-5 border rounded-3 bg-light">
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Username</label>
+          <input type="Name" class="form-control" id="name-signup" placeholder="Justin Timberlake">
+          <label for="floatingInput">Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="Email" class="form-control" id="email-signup" placeholder="name@example.com">
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="password-signup" placeholder="Password">
           <label for="floatingPassword">Password</label>
         </div>
         <div class="checkbox mb-3">
@@ -21,7 +26,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+        <button class="submitBtn w-100 btn btn-lg btn-primary">Sign up</button>
         <hr class="my-4">
         <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
       </form>
@@ -41,3 +46,5 @@
   </div>
   {{/each}}
 </section>
+
+<script src="./js/signup.js"></script>
