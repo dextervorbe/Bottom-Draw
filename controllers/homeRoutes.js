@@ -40,7 +40,7 @@ router.get('/item/:id', async (req, res) => {
 
     const item = itemData.get({ plain: true });
 
-    res.render('item', {
+    res.render('single-item', {
       ...item,
       logged_in: req.session.logged_in
     });
