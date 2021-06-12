@@ -35,6 +35,10 @@ User.init(
         len: [8],
       },
     },
+    // favorites: {
+    //   type: DataTypes.ARRAY,
+    //   allowNull: false,
+    // },
   },
   {
     hooks: {

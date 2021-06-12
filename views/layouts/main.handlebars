@@ -25,6 +25,7 @@
       <form class="justify-content-end">
         {{#if logged_in}}
         <a href="/dashboard">Hi there, {{ user.name }}</a>
+        <button class="btn" id="logout">logout</button>
         {{else}}
         <button class="btn btn-outline-success me-2" type="button">Log In</button>
         {{/if}}
@@ -39,6 +40,9 @@
     {{!-- need footer --}}
   </footer>
 
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

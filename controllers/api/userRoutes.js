@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+const withAuth = require('../../utils/auth');
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -55,6 +57,37 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+// Put Request for User's list of favorite items 
+// router.put('/favorites', withAuth, async (req, res) => {
+//   try {
+//     // find the user by id and get favorites array
+//     // push the id of the item that has been favorited probably stored in req.body
+//     // do an update by changing the favorites array to the array with the new addition
+//   } catch (err) {
+
+//   }
+// })
+
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const projectData = await Project.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!projectData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
+    }
+
+    res.status(200).json(projectData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
