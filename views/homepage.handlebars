@@ -41,7 +41,7 @@
 <section>
   {{#each items as |item| }}
   <div class="col-md-2 column productbox">
-    <img src={{item.image}} class="img-responsive">
+    <img src="/images/{{item.image}}" class="img-responsive">
     <a class="producttitle" href="/item/{{item.id}}">{{item.name}}</a>
     <div class="productprice">
       <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-sm" role="button">BUY</a></div>
