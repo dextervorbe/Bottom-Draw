@@ -7,6 +7,9 @@
         fast-fashion websites. (and hey, its good for the enviornment too.) Sign up now to start:</p>
     </div>
 
+    {{#if logged_in}}
+
+    {{else}}
     <div class="col-md-10 mx-auto col-lg-5">
       <form class="p-4 p-md-5 border rounded-3 bg-light">
         <div class="form-floating mb-3">
@@ -31,6 +34,7 @@
         <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
       </form>
     </div>
+    {{/if}}
   </div>
 </section>
 
