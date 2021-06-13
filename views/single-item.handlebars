@@ -1,14 +1,15 @@
 <div class="text-center">
   <h2>{{name}}</h2>
-  <img src={{item.image}} class="img-responsive">
+  <img src="/images/{{image}}" class="img-responsive">
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_posted}}</p>
   <p>
     <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount price}}</span>
+    <span class="dollar-amount">{{price}}</span>
   </p>
   <p>
     <button class="btn btn-primary">Buy this item!</button>
+    <button id="delete-item-btn" class="btn btn-primary">Delete This Item</button>
   </p>
 </div>
 

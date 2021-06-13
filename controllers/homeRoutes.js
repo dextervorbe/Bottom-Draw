@@ -27,6 +27,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/item/new', (req, res) => {
+
+  res.render('new-item', {
+    logged_in: req.session.logged_in
+  })
+
+})
+
 router.get('/item/:id', async (req, res) => {
   try {
     const itemData = await Item.findByPk(req.params.id, {

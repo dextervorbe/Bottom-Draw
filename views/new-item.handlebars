@@ -1,22 +1,36 @@
 <div class="newItem-input" style="margin: 0 auto; display: flex; justify-content: center;">
   <div class="col-md-6">
-    <h3>New Arti:</h3>
+    <h3>New Item:</h3>
 
-    <form class="form new-project-form">
+    <form class="form new-item-form" method="post" action="/api/items">
+
       <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <label for="item-name">Item name:</label>
+        <input class="form-input" type="text" id="item-name" name="name" value="belt" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+        <label for="item-description">Description: </label>
+        <input class="form-input" type="text" id="item-description" name="description" value="a belt" />
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <label for="item-price">Price: </label>
+        <input class="form-input" type="text" id="item-price" name="price" value="20" />
+      </div>
+      <div class="form-group">
+        <label for="item-size-number">Size Number: </label>
+        <input class="form-input" type="number" id="item-size-number" name="size_number" value="36" />
+      </div>
+      <div class="form-group">
+        <label for="item-size-letter">Size Letter: </label>
+        <input class="form-input" type="text" id="item-size-letter" name="size_letter" value="L" />
+      </div>
+      <div class="form-group">
+        <label for="item-image">Image Name: </label>
+        <input class="form-input" type="text" id="item-image" name="image" value="belt.jpg" />
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
+
     </form>
   </div>

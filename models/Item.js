@@ -27,11 +27,11 @@ Item.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    sizeNumber: {
+    size_number: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    sizeLetter: {
+    size_letter: {
       type: DataTypes.STRING,
       allowNull: true,
     },
