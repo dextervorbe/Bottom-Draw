@@ -1,12 +1,15 @@
 <section class="container col-xl-10 col-xxl-8 px-4 py-5 custom-intro">
   <div class="row align-items-center g-lg-5 py-5">
+    {{#if logged_in}}
+    {{else}}
     <div class="col-lg-7 text-center text-lg-start">
       <h1 class="display-4 fw-bold lh-1 mb-3">BUY ... SELL ... TRADE ...</h1>
       <p class="col-lg-10 fs-4">OCTO is a platform to buy and sell clothing. OCTO empowers fashion entrepenurs to run
         their own business and express their creativity. Shop with us to discover cool clothing you can't find on
         fast-fashion websites. (and hey, its good for the enviornment too.) Sign up now to start:</p>
     </div>
-
+    {{/if}}
+    
     {{#if logged_in}}
 
     {{else}}
@@ -41,7 +44,7 @@
 <section>
   {{#each items as |item| }}
   <div class="col-md-2 column productbox">
-    <img src="/images/{{item.image}}" class="img-responsive">
+    <img height="200" width="200" src="/images/{{item.image}}" class="img-responsive box">
     <a class="producttitle" href="/item/{{item.id}}">{{item.name}}</a>
     <div class="productprice">
       <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-sm" role="button">BUY</a></div>
