@@ -9,7 +9,7 @@ router.get('/', withAuth, (req, res) => {
   
     Item.findAll({
       where: {
-        user_id: req.session.user_id
+        user_id: req.session.user_id,
       }
     })
     .then(itemData => {

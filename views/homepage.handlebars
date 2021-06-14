@@ -41,14 +41,18 @@
   </div>
 </section>
 
-<section>
+<section class="homepage">
+  <p class="review">Review Items for Sale!!</p>
   {{#each items as |item| }}
-  <div class="col-md-2 column productbox">
-    <img height="200" width="200" src="/images/{{item.image}}" class="img-responsive box">
-    <a class="producttitle" href="/item/{{item.id}}">{{item.name}}</a>
-    <div class="productprice">
-      <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-sm" role="button">BUY</a></div>
-      <div class="pricetext">{{format_amount item.price}}</div>
+  <div class="col-md-2 column box card float-left">
+    <div class="identificationcard">
+      <img src="/images/{{item.image}}" class="">
+      <div class="card-body"></div>
+      <a class="" href="/item/{{item.id}}">{{item.name}}</a>
+      <div class="productprice">
+        <div class="pricetext">${{format_amount item.price}}.00</div>
+        <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-lg" role="button">BUY</a></div>
+      </div>
     </div>
   </div>
   {{/each}}

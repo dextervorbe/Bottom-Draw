@@ -3,17 +3,17 @@
         
     <h2 class="title pb-4"><strong>Dashboard:Your Items</strong></h2><hr>
 
-    <a href="/item/new"><button class="btn btn-success btn-lg" type="submit">Add New Item</button></a>
+    <a href="/item/new"><button class="btn btn-success btn-lg float-left" type="submit">Add New Item</button></a>
 
 
 
     {{#each items as |item| }}
-        <div class="col-md-2 column productbox">
-            <img src="/images/{{item.image}}" class="img-responsive box">
-            <a class="producttitle" href="/item/{{item.id}}">{{item.name}}</a>
-            <div class="productprice">
-            <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-sm" role="button">BUY</a></div>
-            <div class="pricetext">{{format_amount item.price}}</div>
+        <div class="col-md-2 column card float-left dasbhboarditems">
+            <img src="/images/{{item.image}}" class="img-responsive">
+            <a class="producttitle card-link" href="/item/{{item.id}}">{{item.name}}</a>
+            <div class="productprice ">
+                <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-lg" role="button">SELL</a></div>
+                <div class="pricetext">${{format_amount item.price}}.00</div>
             </div>
         </div>
     {{/each}}
