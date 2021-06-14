@@ -18,7 +18,7 @@ const signupFormHandler = async (event) => {
         console.log(password);
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
