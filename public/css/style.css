@@ -37,3 +37,18 @@ header, .project:not(:last-child) {
   display: flex;
   justify-content: center;
 }
+
+.identificationcard {
+  padding: 70px 70px;
+  font-size: 25px;
+}
+
+.dasbhboarditems {
+  padding: 30px 75px;
+  font-size: 22px;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+}

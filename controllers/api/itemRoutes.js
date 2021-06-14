@@ -28,7 +28,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!itemData) {
-      res.status(404).json({ message: 'No item found with this id!' });
+      res.status(404).json({ message: 'You may not remove this item!' });
       return;
     }
 

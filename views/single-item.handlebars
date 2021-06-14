@@ -7,10 +7,14 @@
     <span for="img" aria-label="money">💲</span>
     <span class="dollar-amount">{{price}}</span>
   </p>
+  {{#if logged_in}}
   <p>
     <button class="btn btn-primary">Buy this item!</button>
+  {{else}}
+  {{/if}}
     <button id="delete-item-btn" class="btn btn-primary">Delete This Item</button>
   </p>
+
 </div>
 
 {{!-- <div class="container col-xxl-8 px-4 py-5">
