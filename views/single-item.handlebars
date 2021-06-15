@@ -19,13 +19,15 @@
   <img src="{{image}}" class="img-responsive">
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_posted}}</p>
+  <p>{{size_letter}}</p>
+  <p>{{size_number}}</p>
   <p>
     <span for="img" aria-label="money">💲</span>
     <span class="dollar-amount">{{price}}</span>
   </p>
   {{#if logged_in}}
   <p>
-    <button class="btn btn-primary">Buy this item!</button>
+    <a href="/item/purchase/{{id}}"><button class="btn btn-primary">Buy this item!</button></a>
   {{else}}
   {{/if}}
   </p>

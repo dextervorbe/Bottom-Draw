@@ -18,6 +18,56 @@ router.post('/', withAuth, async (req, res) => {
  
 });
 
+
+
+router.post('/update/:id', (req, res) => {
+  console.log(res.body)
+  console.log(req.params.id)
+  Item.update(
+    {
+      ...req.body
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  )
+  .then((updateItem) => {
+    res.redirect(`/item/${req.params.id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(400).json(err)
+  })
+
+})
+
+router.post('/purchase', withAuth, async (req, res) => {
+
+
+  
+  Item.update(
+    {
+      available: false
+    },
+    {
+      where: {
+        id: req.body.item_id
+      }
+    }
+  )
+  .then((updateItem) => {
+    res.redirect(`/dashboard/1`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(400).json(err)
+  })
+  
+
+})
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const itemData = await Item.destroy({

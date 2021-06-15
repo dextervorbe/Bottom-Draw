@@ -4,7 +4,7 @@
 
     {{#each items as |item| }}
     <img src="{{item.image}}" class="img-responsive">
-    <form class="form new-item-form" method="post" action="/api/items">
+    <form class="form new-item-form" method="post" action="/api/items/update/{{item.id}}">
 
       <div class="form-group">
         <label for="item-name">Item name: </label>
@@ -30,6 +30,7 @@
         <label for="item-image">Image Name: </label>
         <input class="form-input" type="text" id="item-image" name="image" value={{item.image}} />
       </div>
+
       {{/each}}
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>

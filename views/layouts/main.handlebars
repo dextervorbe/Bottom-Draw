@@ -14,6 +14,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+  
+
 </head>
 
 <body>
@@ -27,7 +33,7 @@
       </form>
       <div class="justify-content-end btn-group">
         {{#if logged_in}}
-        <a href="/dashboard" class="btn btn-outline-success custom-button profile-btn"><i class="far fa-user-circle"></i> {{user.name}} </a>
+        <a href="/dashboard" class="btn btn-outline-success custom-button profile-btn"><i class="far fa-user-circle"></i> {{user_name}}'s Dashboard </a>
         <button id="logout" class="btn  btn-outline-success custom-button">logout</button>
         {{else}}
         <button class="btn btn-outline-success me-2 custom-button" type="button" onclick= "window.location.href='/login'">login</button>
@@ -43,7 +49,9 @@
     {{!-- need footer --}}
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   {{#if logged_in}}
+
   <script src="/js/logout.js"></script>
   <script src="/js/deleteItem.js"></script>
   {{/if}}

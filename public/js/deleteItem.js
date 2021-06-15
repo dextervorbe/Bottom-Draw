@@ -7,6 +7,9 @@ async function deleteFormHandler(event) {
 
     const { id } = event.target.dataset;
 
+    console.log(id)
+    console.log(event.target)
+
     const response = await fetch(`/api/items/${id}`, {
       method: 'DELETE',
       headers: {
@@ -19,6 +22,12 @@ async function deleteFormHandler(event) {
     } else {
       alert(response.statusText);
     }
+    
   }
   
-  document.querySelector('#delete-item-btn').addEventListener('click', deleteFormHandler);
+  let deleteButtons = document.getElementsByClassName('delete-item-btn')
+
+  for (let btn of deleteButtons) {
+
+    btn.addEventListener('click', deleteFormHandler);
+  }
