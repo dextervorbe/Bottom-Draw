@@ -1,24 +1,57 @@
-<div class="mb-5 pt-3">
-
-
-    <h2 class="title pb-4"><strong>Dashboard:Your Items</strong></h2>
-    <hr>
-
-    <a href="/item/new"><button class="btn btn-success btn-lg float-left" type="submit">Add New Item</button></a>
-
-
-
-    {{#each items as |item| }}
-    <div class="col-md-2 column card float-left dasbhboarditems">
-        <img src="/images/{{item.image}}" class="img-responsive">
-        <a class="producttitle card-link" href="/item/{{item.id}}">{{item.name}}</a>
-        <div class="productprice ">
-            <a href="/dashboard/edit-item/{{item.id}}"><button id="edit-item-btn" class="btn btn-primary"
-                    data-id={{item.id}}>Edit</button></a>
-            <button><button id="delete-item-btn" class="btn btn-primary" data-id={{item.id}}>Delete</button>
-                <div class="pricetext">${{format_amount item.price}}.00</div>
-        </div>
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/store.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Your Store</h1>
+    <div class="col-lg-6 mx-auto">
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="/item/new" type="button" class="btn btn-primary btn-lg px-4 gap-3 new-item-btn"><i class="fas fa-plus"></i>  New Post</a>
+      </div>
     </div>
-    {{/each}}
-
 </div>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {{#each items as |item|}}
+      <div class="col">
+        <div class="card shadow-sm">
+          <img class="card-img-top" width="100%" height="225" src="{{item.image}}"><title>Placeholder</title></img>
+          <div class="card-body">
+            <p class="card-text">${{item.price}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/item/{{item.id}}" type="button" id="view-btn" class="btn btn-sm btn-outline-secondary">View</a>
+              </div>
+              <div class="btn-group">
+                <a href="/dashboard/edit-item/{{item.id}}" type="button" id="edit-item-btn" class="btn btn-sm btn-outline-secondary">Edit</a>
+              </div>
+              <div class="btn-group">
+                <a id="delete-item-btn" type="button" data-id={{item.id}} class="btn btn-sm btn-outline-secondary">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="mb-5 pt-3">
+<h2 class="title pb-4"><strong>Dashboard:Your Items</strong></h2>
+<hr>
+
+<a href="/item/new"><button class="btn btn-success btn-lg float-left" type="submit">Add New Item</button></a>
+
+{{#each items as |item| }}
+<div class="col-md-2 column card float-left dasbhboarditems">
+    <img src="{{item.image}}" class="img-responsive">
+    <a class="producttitle card-link" href="/item/{{item.id}}">{{item.name}}</a>
+    <div class="productprice ">
+        <a href="/dashboard/edit-item/{{item.id}}"><button id="edit-item-btn" class="btn btn-primary"
+                data-id={{item.id}}>Edit</button></a>
+        <button><button id="delete-item-btn" class="btn btn-primary" data-id={{item.id}}>Delete</button>
+            <div class="pricetext">${{format_amount item.price}}.00</div>
+    </div>
+</div>
+{{/each}}
+</div> --}}

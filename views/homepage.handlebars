@@ -3,18 +3,14 @@
     {{#if logged_in}}
     {{else}}
     <div class="col-lg-7 text-center text-lg-start">
-      <h1 class="display-4 fw-bold lh-1 mb-3">BUY ... SELL ... TRADE ...</h1>
-      <p class="col-lg-10 fs-4">OCTO is a platform to buy and sell clothing. OCTO empowers fashion entrepenurs to run
+      <h2 class="display-4 fw-bold lh-1 mb-3 hero-title">BUY ... SELL ... TRADE ...</h2>
+      <p class="col-lg-10 fs-4 hero-subtext">Bottom Drawer Marketplace is a platform to buy and sell clothing. We empower fashion entrepenurs to run
         their own business and express their creativity. Shop with us to discover cool clothing you can't find on
-        fast-fashion websites. (and hey, its good for the enviornment too.) Sign up now to start:</p>
+        fast-fashion websites. (and hey, its good for the enviornment too.) Sign up now to begin.</p>
     </div>
-    {{/if}}
-    
-    {{#if logged_in}}
 
-    {{else}}
     <div class="col-md-10 mx-auto col-lg-5">
-      <form class="p-4 p-md-5 border rounded-3 bg-light">
+      <form class="p-4 p-md-5 border rounded-3 bg-light custom-signup">
         <div class="form-floating mb-3">
           <input type="Name" class="form-control" id="name-signup" placeholder="Justin Timberlake">
           <label for="floatingInput">Username</label>
@@ -32,7 +28,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="submitBtn w-100 btn btn-lg btn-primary">Sign up</button>
+        <button class="submitBtn w-100 btn btn-lg btn-primary custom-signup-btn">Sign up</button>
         <hr class="my-4">
         <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
       </form>
@@ -41,21 +37,28 @@
   </div>
 </section>
 
-<section class="homepage">
-  <p class="review">Review Items for Sale!!</p>
-  {{#each items as |item| }}
-  <div class="col-md-2 column box card float-left">
-    <div class="identificationcard">
-      <img src="/images/{{item.image}}" class="">
-      <div class="card-body"></div>
-      <a class="" href="/item/{{item.id}}">{{item.name}}</a>
-      <div class="productprice">
-        <div class="pricetext">${{format_amount item.price}}.00</div>
-        <div class="pull-right"><a href="/item/{{item.id}}" class="btn btn-danger btn-lg" role="button">BUY</a></div>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <p class="review">Check out what people are selling</p>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {{#each items as |item|}}
+      <div class="col">
+        <div class="card shadow-sm">
+          <img class="card-img-top" width="100%" height="225" src="{{item.image}}"><title>Placeholder</title></img>
+          <div class="card-body">
+            <p class="card-text">${{item.price}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="/item/{{item.id}}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+              </div>
+              <small class="text-muted">{{item.user.name}}'s Closet</small>
+            </div>
+          </div>
+        </div>
       </div>
+      {{/each}}
     </div>
   </div>
-  {{/each}}
-</section>
+</div>
 
 <script src="./js/signup.js"></script>

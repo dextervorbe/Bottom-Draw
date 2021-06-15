@@ -28,7 +28,7 @@ Item.init(
       allowNull: false,
     },
     size_number: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     size_letter: {
