@@ -1,5 +1,120 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+
+.custom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px auto;
+  border-bottom: 0.0625rem solid rgb(215, 215, 215);
+  padding: 0.75rem 2rem;
+}
+
+.custom-logo {
+  align-items: center;
+  color: #CEFF1A;
+  font-weight: bolder;
+}
+
+.custom-search-bar {
+  align-items: normal;
+}
+
+.custom-search {
+  align-items: center;
+  width: 44rem;
+  border-radius: 15px;
+  color: white;
+  background-color: #212529;
+}
+
+.custom-button {
+  border-radius: 0px;
+  font-weight: bolder;
+  border-color: #CEFF1A;
+  color: #CEFF1A;
+}
+
+.custom-button:hover {
+  border-color:#CEFF1A;
+  background-color: #CEFF1A;
+  color:#212529;
+}
+
+.profile-btn {
+  margin-right: 15px;
+  border: none;
+}
+
+.profile-btn:hover {
+  background-color: #212529;
+  color: #708F00;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.custom-signup {
+  background-color: #A8A7C8;
+}
+
+.custom-signup-btn {
+  background-color:#CEFF1A;
+  border-color: #CEFF1A;
+  color: #212529;
+}
+
+.custom-signup-btn:hover {
+  background-color: #A0CC00;
+  border-color: #A0CC00;
+  color: #212529;
+}
+
+.custom-intro {
+  background-image: url("/public/images/purple.jpg");
+}
+
+.new-item-btn {
+  background-color: #6A5CD6;
+  border-color: #6A5CD6;
+  margin-top: 13px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.new-item-btn:hover {
+  background-color: #A69DE7;
+  border-color: #A69DE7;
+}
+
+/* #view-btn {
+  border-color:#CEFF1A
+} */
+
+#view-btn:hover {
+  border-color:#CEFF1A;
+  background-color: #CEFF1A;
+}
+
+/* #edit-item-btn {
+  border-color: #6A5CD6;
+} */
+
+#edit-item-btn:hover {
+  border-color: #6A5CD6;
+  background-color: #6A5CD6;
+}
+
+/* #delete-item-btn {
+  border-color: red;
+} */
+
+#delete-item-btn:hover {
+  border-color: red;
+  background-color: red;
 }
 
 .no-button {
@@ -22,15 +137,6 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
-
-/* .input-group-rounded {
-  width: 30%;
-  border-radius: 15px;
-} */
-
-/* #login-box {
-  margin: 0 auto;
-} */
 
 .welcome-title {
   margin: 0 auto;

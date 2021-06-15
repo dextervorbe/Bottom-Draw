@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OCTO</title>
+  <title>Bottom Drawer</title>
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -17,21 +17,20 @@
 </head>
 
 <body>
-  <nav class=" navbar sticky-top navbar-dark bg-dark">
+  <nav class="navbar sticky-top navbar-dark bg-dark custom-nav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">OCTO</a>
+      <a class="navbar-brand custom-logo" href="/">𝔹OTTOM 𝔻RAWER</a>
       <form class="d-flex">
-        <div class="input-group input-group-rounded">
-          <input class="input-group-field" type="search" placeholder="Search for items, brands, styles, ect...">
+        <div class="input-group input-group-rounded custom-search-bar">
+          <input class="input-group-field custom-search" type="search" placeholder=" 𝘘  Search for items, brands, styles, ect...">
         </div>
-    
       </form>
       <div class="justify-content-end btn-group">
         {{#if logged_in}}
-        <a href="/dashboard" class=" btn btn-outline-success">Dashboard</a>
-        <button id="logout" class="btn  btn-outline-success" style="color: white">logout</button>
+        <a href="/dashboard" class="btn btn-outline-success custom-button profile-btn"><i class="far fa-user-circle"></i> {{user.name}} </a>
+        <button id="logout" class="btn  btn-outline-success custom-button">logout</button>
         {{else}}
-        <button class="btn btn-outline-success me-2" type="button" onclick= "window.location.href='/login'">Log In</button>
+        <button class="btn btn-outline-success me-2 custom-button" type="button" onclick= "window.location.href='/login'">login</button>
         {{/if}}
       </div>
     </div>

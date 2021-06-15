@@ -25,7 +25,7 @@ router.get('/', withAuth, (req, res) => {
 
         res.render('dashboard', {
           items: items,
-          logged_in: true
+          logged_in: true,
         });
 
       }
