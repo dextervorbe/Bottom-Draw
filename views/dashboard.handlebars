@@ -1,3 +1,34 @@
+{{#if thanks}}
+<div id="thanksModal" style="z-index:10000" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thanks!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Thank you for your purchase.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $(document).ready(() => {
+
+    $("#thanksModal").modal('show')
+  })
+
+
+</script>
+
+{{/if}}
+
 <div class="px-4 py-5 my-5 text-center">
     <img class="d-block mx-auto mb-4" src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/store.png" alt="" width="72" height="57">
     <h1 class="display-5 fw-bold">Your Store</h1>
@@ -25,7 +56,7 @@
                 <a href="/dashboard/edit-item/{{item.id}}" type="button" id="edit-item-btn" class="btn btn-sm btn-outline-secondary">Edit</a>
               </div>
               <div class="btn-group">
-                <a id="delete-item-btn" type="button" data-id={{item.id}} class="btn btn-sm btn-outline-secondary">Delete</a>
+                <a type="button" data-id={{item.id}} class="delete-item-btn btn btn-sm btn-outline-secondary">Delete</a>
               </div>
             </div>
           </div>

@@ -2,15 +2,24 @@ const router = require('express').Router();
 const { Item, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+
 router.get('/', async (req, res) => {
   try {
     // Get all items and JOIN with user data
-    const itemData = await Item.findAll({
+    const itemData = await Item.findAll(
+      {
+        where: {
+          available: true
+        }
+      },
+      {
       include: [
         {
           model: User,
           attributes: ['name'],
         },
+        
       ],
     });
 
@@ -18,9 +27,11 @@ router.get('/', async (req, res) => {
     const items = itemData.map((item) => item.get({ plain: true }));
 
     // Pass serialized data and session flag into template
+    console.log(req.session)
     res.render('homepage', { 
       items, 
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name
     });
   } catch (err) {
     res.status(500).json(err);
@@ -30,7 +41,8 @@ router.get('/', async (req, res) => {
 router.get('/item/new', (req, res) => {
 
   res.render('new-item', {
-    logged_in: req.session.logged_in
+    logged_in: req.session.logged_in,
+    user_name: req.session.user_name
   })
 
 })
@@ -50,12 +62,39 @@ router.get('/item/:id', async (req, res) => {
 
     res.render('single-item', {
       ...item,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+router.get('/item/purchase/:id', async (req, res) => {
+  try {
+    const itemData = await Item.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+          
+        },
+      ],
+    });
+
+    const item = itemData.get({ plain: true });
+
+    res.render('purchase', {
+      ...item,
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -70,7 +109,8 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
+      user_name: req.session.user_name
     });
   } catch (err) {
     res.status(500).json(err);

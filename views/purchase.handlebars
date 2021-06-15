@@ -1,0 +1,63 @@
+<div class="newItem-input" style="margin: 0 auto; display: flex; justify-content: center;">
+  <div class="col-md-6">
+    <h3>Purchase this item</h3>
+{{!-- Form to be used to Purcahse Item --}}
+
+    <form class="form new-item-form" method="post" action="/api/items/purchase"> {{!-- Would a new api route file need created for purchase? --}}
+
+      <div class="form-group">
+        {{!-- Firt Name --}} 
+
+        {{!-- Last Name --}}
+
+        {{!-- email address --}}
+
+        {{!-- Dropdown menu with shipping type
+        Standard 7-10 Business days
+        Express 2-4 Buseiness days
+        Overnight 1 Business days--}}
+
+        {{!-- Please enter 16 digit credit card number --}}
+
+        {{!-- Submit Button --}}
+
+        {{!-- Prompt appears pops up and stating "You're Item is Being Processed" --}}
+
+        <label for="customer-first-name">First Name:</label>
+        <input class="form-input" type="text" id="customer-first-name" value="" name="firstName" />
+      </div>
+      <div class="form-group">
+        <label for="customer-last-name">Last Name: </label>
+        <input class="form-input" type="text" id="customer-last-name" value="" name="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="customer-email">Email Address: </label>
+        <input class="form-input" type="text" id="customer-email" value="" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="credit-card-nmber">Please enter your 16 digit Credit Card Number</label>
+        <input class="form-input" type="text" id="credit-card-number"  name="ccNumber" />
+      </div>
+      
+      <div class="form-group">
+        <label for="shipping-method">Shipping</label>
+        <Select class="form-input" id="shipping-method" name="shippingMethod" >
+          <option value="0">Select a shipping method</option>
+          <option value="1">Standard 7-10 Business days</option>
+          <option value="2">Express 2-4 Buseiness days</option>
+          <option value="3">Overnight 1 Business days</option>
+          </Select>
+      </div>
+
+      <input type="hidden" value="{{id}}" name="item_id" />
+      
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+
+  {{!-- <script src="./js/login.js"></script> --}}
+  {{!-- create a js for purchase --}}

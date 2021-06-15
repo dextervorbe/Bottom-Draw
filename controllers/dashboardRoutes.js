@@ -3,9 +3,8 @@ const sequelize = require('../config/connection');
 const { Item, User} = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, (req, res) => {
 
-  console.log(req.session)
+router.get('/:thankyouflag?', withAuth, (req, res) => {
 
   Item.findAll({
     where: {
@@ -22,10 +21,12 @@ router.get('/', withAuth, (req, res) => {
 
       } else {
         const items = itemData.map((item) => item.get({ plain: true }));
-
+        console.log(req.session.user_name)
         res.render('dashboard', {
           items: items,
           logged_in: true,
+          user_name: req.session.user_name,
+          thanks: (req.params.thankyouflag !== undefined) ? true : false
         });
 
       }
@@ -56,7 +57,8 @@ router.get('/edit-item/:id', async (req, res) => {
   
   res.render('edit-item', {
      items,
-     logged_in: true
+     logged_in: true,
+     user_name: req.session.user_name
    });
 });
 
