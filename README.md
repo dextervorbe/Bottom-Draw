@@ -14,15 +14,14 @@ Bottom Drawer Marketplace is an online store, where each user can buy or sell cl
  * [Questions](#questions)
 
 # Demo
-Head to this link to watch a demonstration of the app- [Demo]()
+Head to this link to watch a demonstration of the app- [Demo](https://drive.google.com/file/d/13_HvL9eZ2Kv_2deAIPh_nbZuJ3JZTPc2/view?usp=sharing)
 
 # Usage
 
-![Add an Item](https://user-images.githubusercontent.com/77814900/122253194-f1fadd80-ce99-11eb-90cc-253d58d5fdc1.png)
-
-
-
-![Working through errors](https://user-images.githubusercontent.com/77814900/122219207-33c95b00-ce7d-11eb-9e99-3b1cfd44442d.png)
+![1](https://github.com/heatherloisejackson/super-octo-funicular/blob/main/public/images/Untitled.png)
+![2](https://github.com/heatherloisejackson/super-octo-funicular/blob/main/public/images/Untitled%202.png)
+![3](https://github.com/heatherloisejackson/super-octo-funicular/blob/main/public/images/Untitled%203.png)
+![4](https://github.com/heatherloisejackson/super-octo-funicular/blob/main/public/images/Untitled%204.png)
 
 # Contributors
 Heather Jackson 
