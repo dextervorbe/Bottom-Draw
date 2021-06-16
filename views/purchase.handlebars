@@ -1,63 +1,44 @@
-<div class="newItem-input" style="margin: 0 auto; display: flex; justify-content: center;">
-  <div class="col-md-6">
-    <h3>Purchase this item</h3>
-{{!-- Form to be used to Purcahse Item --}}
-
-    <form class="form new-item-form" method="post" action="/api/items/purchase"> {{!-- Would a new api route file need created for purchase? --}}
-
-      <div class="form-group">
-        {{!-- Firt Name --}} 
-
-        {{!-- Last Name --}}
-
-        {{!-- email address --}}
-
-        {{!-- Dropdown menu with shipping type
-        Standard 7-10 Business days
-        Express 2-4 Buseiness days
-        Overnight 1 Business days--}}
-
-        {{!-- Please enter 16 digit credit card number --}}
-
-        {{!-- Submit Button --}}
-
-        {{!-- Prompt appears pops up and stating "You're Item is Being Processed" --}}
-
-        <label for="customer-first-name">First Name:</label>
-        <input class="form-input" type="text" id="customer-first-name" value="" name="firstName" />
-      </div>
-      <div class="form-group">
-        <label for="customer-last-name">Last Name: </label>
-        <input class="form-input" type="text" id="customer-last-name" value="" name="lastName" />
-      </div>
-      <div class="form-group">
-        <label for="customer-email">Email Address: </label>
-        <input class="form-input" type="text" id="customer-email" value="" name="email" />
-      </div>
-      <div class="form-group">
-        <label for="credit-card-nmber">Please enter your 16 digit Credit Card Number</label>
-        <input class="form-input" type="text" id="credit-card-number"  name="ccNumber" />
-      </div>
-      
-      <div class="form-group">
-        <label for="shipping-method">Shipping</label>
-        <Select class="form-input" id="shipping-method" name="shippingMethod" >
-          <option value="0">Select a shipping method</option>
-          <option value="1">Standard 7-10 Business days</option>
-          <option value="2">Express 2-4 Buseiness days</option>
-          <option value="3">Overnight 1 Business days</option>
-          </Select>
-      </div>
-
-      <input type="hidden" value="{{id}}" name="item_id" />
-      
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-
-    </form>
+<div class="newItem-input" class="col-md-6" style="margin: 0 auto;">
+  <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="data:image/png;base64,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" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Check Out</h1>
   </div>
 
+  <form class="form new-item-form" method="post" action="/api/items/purchase">
 
-  {{!-- <script src="./js/login.js"></script> --}}
-  {{!-- create a js for purchase --}}
+    <div class="form-group">
+      <label for="customer-first-name">First Name:</label>
+      <input class="form-input" type="text" id="customer-first-name" value="" name="firstName" />
+    </div>
+    <div class="form-group">
+      <label for="customer-last-name">Last Name: </label>
+      <input class="form-input" type="text" id="customer-last-name" value="" name="lastName" />
+    </div>
+    <div class="form-group">
+      <label for="customer-email">Email Address: </label>
+      <input class="form-input" type="text" id="customer-email" value="" name="email" />
+    </div>
+    <div class="form-group">
+      <label for="credit-card-nmber">Please enter your 16 digit Credit Card Number</label>
+      <input class="form-input" type="text" id="credit-card-number"  name="ccNumber" />
+    </div>
+    
+    <div class="form-group">
+      <label for="shipping-method">Shipping</label>
+      <Select class="form-input" id="shipping-method" name="shippingMethod" >
+        <option value="0">Select a shipping method</option>
+        <option value="1">Standard 7-10 Business days</option>
+        <option value="2">Express 2-4 Buseiness days</option>
+        <option value="3">Overnight 1 Business days</option>
+        </Select>
+    </div>
+
+    <input type="hidden" value="{{id}}" name="item_id" />
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary custom-buy-btn">Submit</button>
+    </div>
+
+  </form>
+
+</div>
