@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Item } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//,,
 router.post('/', withAuth, async (req, res) => {
 
   try {
@@ -17,8 +16,6 @@ router.post('/', withAuth, async (req, res) => {
   }
  
 });
-
-
 
 router.post('/update/:id', (req, res) => {
   console.log(res.body)
@@ -40,13 +37,10 @@ router.post('/update/:id', (req, res) => {
     console.log(err)
     res.status(400).json(err)
   })
-
 })
 
 router.post('/purchase', withAuth, async (req, res) => {
 
-
-  
   Item.update(
     {
       available: false
@@ -65,7 +59,6 @@ router.post('/purchase', withAuth, async (req, res) => {
     res.status(400).json(err)
   })
   
-
 })
 
 router.delete('/:id', withAuth, async (req, res) => {
