@@ -1,28 +1,22 @@
- # 💥𝔹OTTOM 𝔻RAWER💥
+# 💥𝔹OTTOM 𝔻RAWER💥
 
- # Description
- ### My team has been tasked with creating our very first full application. We decided to create a yardsale, marketplace style website. This allows anyone to signup for an account in order to buy or sell their personal clothing and accesories.
- 👟👚🥽👗👖👔🥾👠👜
+# Description
+👚🥽👗👖👔🥾👠👜
+Bottom Drawer Marketplace is an online store, where each user can buy or sell clothing and other items. Any user may access the store to see what is available for purchase, but you must sign up or log in to buy items. Once users have an account, they can see their own store, which is a collection of the items they have posted for sale. Users can also edit and delete their own items. Images must be submitted in the form of a URL and once any item is purchased, it is removed from the store. In order to create this site, our developers needed an understanding of how to create the front-end and back-end aspects of a full-stack application. The backend uses Node.js and Express.js to create a RESTful API, MySQL and Sequelize ORM for the database, Javascript to create models and make requests, as well as Handlebars, Bootstrap, HTML, CSS, and other front end frameworks to develop a polishes and responsive UI. In addition, this application protects access to posting, buying, editing, or deleting without an account, and for our own safety we were succesffully able to protect our API keys and private local database related information.
 
-  
- # 📚📚 Table of Contents📚📚
- * [Installation](#installation)
+ # Table of Contents
+ * [Demo](#demo)
  * [Usage](#usage)
  * [Contributors](#contributors)
+ * [Instructions](#instructions)
  * [Credits](#credits)
  * [License](#license)
-  
- # Installation
-Npm install bcrypt, connect-session-sequelize, dotenv, eslint, express, express-handlebars, expression-session, mysql2, nodemon, sequelize
-Insomnia was used for testing routes
-Mysql Workbench was used to run tables
+ * [Questions](#questions)
 
+# Demo
+Head to this link to watch a demonstration of the app- [Demo]()
 
-
-
- # Usage
-Please click on the included url for the walthrough video which demonstrates how to use this tool
-https://drive.google.com/file/d/1LuQxuG5I2RJTNU_warRBffP6DH4S4Ceg/view?usp=sharing
+# Usage
 
 ![Add an Item](https://user-images.githubusercontent.com/77814900/122253194-f1fadd80-ce99-11eb-90cc-253d58d5fdc1.png)
 
@@ -37,24 +31,35 @@ Dexter Vorbe
 ![Dexter's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=dextervorbe&theme=blue-green)
 Amy Smerlick
 ![Amy's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=amysmerlick&theme=blue-green)
-# Instructions 👀
-Once the user has all required files downloaded, type 'npm install express' and then 'npm install uuid' in the terminal. 
+
+# Instructions
+Head to our website: [Bottom Drawer](https://bottomdrawermarketplace.herokuapp.com/)
+
+OR
+
+Clone our repo, run 'npm install' in the command line, run the Schema in MySQL workbench, then run 'node server.js' in the command line. Open your browser to the appropriate local host. 
+
 # Credits
-Trilogy, GitHub, mySQL, BULMA
+Thank you to Penn LPS Coding Bootcamp, instructors, peers, [JavaScript](https://www.javascript.com/), jQuery, [NPM](https://www.npmjs.com/) and its packages, [Express.js](https://expressjs.com/), [Sequelize](https://sequelize.org/), [MySQL](https://www.mysql.com/) & MySQL Workbench, [Handlebars](https://handlebarsjs.com/) and [Insomnia](https://insomnia.rest/), Bootstrap, Foundation, GoogleFonts, and FontAwesome, and Heroku.
+
 # License
 The application you're enjoying is covered under the MIT license
 ## [![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
-# Questions ❓❓
-For questions, please email me, or contact me via GitHub.
-* 📧Email📬: amysmerlick@gmail.com
-* 💹GitHub💹: www.github.com/amysmerlick
+
+# Questions
+For questions, please email a collaborator, or contact via GitHub.
+
+Amy Smerlick
+* 📧Email: amysmerlick@gmail.com
+* 💹GitHub: www.github.com/amysmerlick
 * ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
 
-* 📧Email📬: dextervorbe@ymail.com
-* 💹GitHub💹: www.github.com/dextervorbe
+Dexter Vorbe
+* 📧Email: dextervorbe@ymail.com
+* 💹GitHub: www.github.com/dextervorbe
 * ![Profile View Counter](https://komarev.com/ghpvc/?username=dextervorbe)
 
-* 📧Email📬: heatherloisejackson@gmail.com
-* 💹GitHub💹: www.github.com/heatherloisejackson
+Heather Jackson
+* 📧Email: heatherloisejackson@gmail.com
+* 💹GitHub: www.github.com/heatherloisejackson
 * ![Profile View Counter](https://komarev.com/ghpvc/?username=heatherloisejacson)
-
