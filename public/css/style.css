@@ -136,8 +136,15 @@ header,
 }
 
 .custom-login {
-  margin-bottom: 500px;
+  padding-bottom: 500px;
 }
+
+.newItem-input {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 500px;
+}
+
 .footer__copyright__text {
   text-align: center;
 }
