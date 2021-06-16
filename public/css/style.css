@@ -57,8 +57,16 @@ header,
   font-size: 3rem;
 }
 
-.custom-signup {
-  background-color: #A8A7C8;
+.custom-buy-btn {
+  background-color: #6A5CD6;
+  border-color: #6A5CD6;
+  border-radius: 1px;
+  width: 100%
+}
+
+.custom-buy-btn:hover {
+  background-color: white;
+  color: #6A5CD6;
 }
 
 .custom-signup-btn {
@@ -115,6 +123,16 @@ header,
 #delete-item-btn:hover {
   border-color: red;
   background-color: red;
+}
+
+.custom-item-info {
+  margin-top: 50px;
+}
+
+.custom-date {
+  position: absolute;
+  bottom: 45px;
+
 }
 
 .no-button {
