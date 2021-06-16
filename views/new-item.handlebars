@@ -1,36 +1,37 @@
-<div class="newItem-input" style="margin: 0 auto; display: flex; justify-content: center;">
-  <div class="col-md-6">
-    <h3>New Item:</h3>
-
-    <form class="form new-item-form" method="post" action="/api/items">
-
-      <div class="form-group">
-        <label for="item-name">Item name:</label>
-        <input class="form-input" type="text" id="item-name" name="name" />
-      </div>
-      <div class="form-group">
-        <label for="item-description">Description of your Item: </label>
-        <input class="form-input" type="text" id="item-description" name="description" />
-      </div>
-      <div class="form-group">
-        <label for="item-price">Price: </label>
-        <input class="form-input" type="text" id="item-price" name="price" />
-      </div>
-      <div class="form-group">
-        <label for="item-size-number">Size Number: </label>
-        <input class="form-input" type="number" id="item-size-number" name="size_number" />
-      </div>
-      <div class="form-group">
-        <label for="item-size-letter">Size Letter: </label>
-        <input class="form-input" type="text" id="item-size-letter" name="size_letter" />
-      </div>
-      <div class="form-group">
-        <label for="item-image">Image Url: </label>
-        <input class="form-input" type="text" id="item-image" name="image" value=".jpg" />
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-
-    </form>
+<div class="newItem-input" class="col-md-6" style="margin: 0 auto;">
+  <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://static.thenounproject.com/png/3318800-200.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">New Item</h1>
   </div>
+
+  <form class="form new-item-form" method="post" action="/api/items">
+    <div class="form-group">
+      <label for="item-name">Item name:</label>
+      <input class="form-input" type="text" id="item-name" name="name" />
+    </div>
+    <div class="form-group">
+      <label for="item-description">Description of your Item: </label>
+      <input class="form-input" type="text" id="item-description" name="description" />
+    </div>
+    <div class="form-group">
+      <label for="item-price">Price: </label>
+      <input class="form-input" type="text" id="item-price" name="price" />
+    </div>
+    <div class="form-group">
+      <label for="item-size-number">Size Number: </label>
+      <input class="form-input" type="number" id="item-size-number" name="size_number" />
+    </div>
+    <div class="form-group">
+      <label for="item-size-letter">Size Letter: </label>
+      <input class="form-input" type="text" id="item-size-letter" name="size_letter" />
+    </div>
+    <div class="form-group">
+      <label for="item-image">Image Url: </label>
+      <input class="form-input" type="text" id="item-image" name="image" value=".jpg" />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary custom-buy-btn">Create</button>
+    </div>
+  </form>
+
+</div>
