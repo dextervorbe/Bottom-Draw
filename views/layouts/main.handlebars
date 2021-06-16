@@ -33,7 +33,7 @@
       </form>
       <div class="justify-content-end btn-group">
         {{#if logged_in}}
-        <a href="/dashboard" class="btn btn-outline-success custom-button profile-btn"><i class="far fa-user-circle"></i> {{user_name}}'s Dashboard </a>
+        <a href="/dashboard" class="btn btn-outline-success custom-button profile-btn"><i class="far fa-user-circle"></i> Welcome {{user_name}} </a>
         <button id="logout" class="btn  btn-outline-success custom-button">logout</button>
         {{else}}
         <button class="btn btn-outline-success me-2 custom-button" type="button" onclick= "window.location.href='/login'">login</button>

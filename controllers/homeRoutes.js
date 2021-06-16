@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const items = itemData.map((item) => item.get({ plain: true }));
-
+    console.log(itemData)
     // Pass serialized data and session flag into template
     console.log(req.session)
     res.render('homepage', { 
