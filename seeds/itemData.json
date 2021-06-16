@@ -4,62 +4,71 @@
     "description": "Levi's Vintage 505 Light Wash Distressed Jeans",
     "sizeNumber": 30,
     "price": 70,
-    "image": "https://cdn.shopify.com/s/files/1/0418/1190/2622/products/image_279f6dda-f70f-43c7-9c0e-6b3416780cec_1024x1024.jpg?v=1604694789"
+    "image": "https://cdn.shopify.com/s/files/1/0418/1190/2622/products/image_279f6dda-f70f-43c7-9c0e-6b3416780cec_1024x1024.jpg?v=1604694789",
+    "username": "Sal"
   },
   {
     "name": "Sneakers",
     "description": "Green and white NIKE Custom Made Air Force 1, Womens",
     "sizeNumber": 7,
     "price": 100,
-    "image": "https://s3.amazonaws.com/thecustommovement-userfiles-mobilehub-569930456/public/a3d0c0db-202c-4d9a-ace7-86bf17350520"
+    "image": "https://s3.amazonaws.com/thecustommovement-userfiles-mobilehub-569930456/public/a3d0c0db-202c-4d9a-ace7-86bf17350520",
+    "username": "Sal"
   },
   {
     "name": "Vintage T-Shirt",
     "description": "Authentic Def Leopard 1981 Tour Red and White Baseball Style T-shirt",
     "sizeLetter": "L",
     "price": 50,
-    "image": "https://di2ponv0v5otw.cloudfront.net/posts/2018/03/21/5ab2b54dfcdc314f6a1f04ee/m_5ab2b5919cc7ef13c3888d72.jpg"
+    "image": "https://di2ponv0v5otw.cloudfront.net/posts/2018/03/21/5ab2b54dfcdc314f6a1f04ee/m_5ab2b5919cc7ef13c3888d72.jpg",
+    "username": "Sal"
   },
   {
     "name": "Crewneck",
     "description": "My dad's old crewneck, slightly worn, great condition.",
     "sizeLetter": "L",
     "price": 35,
-    "image": "https://i.pinimg.com/originals/47/53/fa/4753fa604845ca10fc2d3c9adf5abfe6.jpg"
+    "image": "https://i.pinimg.com/originals/47/53/fa/4753fa604845ca10fc2d3c9adf5abfe6.jpg",
+    "username": "Sal"
   },
   {
     "name": "Dress Shoes",
     "description": "Authentic Italian Leather custom dress shoes, Mens",
     "sizeNumber": 10,
     "price": 85,
-    "image": "https://i.pinimg.com/originals/0c/a4/3f/0ca43f66c3d3d74364f47fa8e97917fa.jpg"
+    "image": "https://i.pinimg.com/originals/0c/a4/3f/0ca43f66c3d3d74364f47fa8e97917fa.jpg",
+    "username": "Sal"
   },
   {
     "name": "Dress",
     "description": "Prairie-style light blue dress with gorgeous lace.",
     "sizeLetter": "M",
     "price": 40,
-    "image": "https://i.etsystatic.com/23047533/c/900/712/0/187/il/f5504a/2904044874/il_340x270.2904044874_op9c.jpg"
+    "image": "https://i.etsystatic.com/23047533/c/900/712/0/187/il/f5504a/2904044874/il_340x270.2904044874_op9c.jpg",
+    "username": "Sal"
   },
   {
     "name": "Button-Down",
     "description": "Short sleeve, men's button down shirt with funky pattern.",
     "sizeLetter": "M",
     "price": 40,
-    "image": "https://img.ltwebstatic.com/images3_pi/2020/07/06/1594009190551f7d45fc51aae889f7c8a44099e132_thumbnail_900x.webp"
+    "image": "https://img.ltwebstatic.com/images3_pi/2020/07/06/1594009190551f7d45fc51aae889f7c8a44099e132_thumbnail_900x.webp",
+    "username": "Sal"
   },
   {
     "name": "Jacket",
     "description": "Unisex Golden State Warriors Full Snap Jacket NWT",
     "sizeLetter": "O/S",
     "price": 150,
-    "image": "https://images.squarespace-cdn.com/content/v1/54da476ee4b013892febc54e/1476731615893-UHRR68OCK9WVP601Y21Y/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/IMG_0226.JPG?format=2500w"
+    "image": "https://images.squarespace-cdn.com/content/v1/54da476ee4b013892febc54e/1476731615893-UHRR68OCK9WVP601Y21Y/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/IMG_0226.JPG?format=2500w",
+    "username": "Sal"
   },
   {
     "name": "Jumper",
     "description": "DAZEY LA Pink Cotton Cropped Overalls New Small",
     "sizeLetter": "S",
     "price": 85,
-    "image": "https://di2ponv0v5otw.cloudfront.net/posts/2021/05/28/60b1778d163df439c6a111f7/m_60b177b343895fd9cc1b5681.jpg"
+    "image": "https://di2ponv0v5otw.cloudfront.net/posts/2021/05/28/60b1778d163df439c6a111f7/m_60b177b343895fd9cc1b5681.jpg",
+    "username": "Sal"
   }
 ]
