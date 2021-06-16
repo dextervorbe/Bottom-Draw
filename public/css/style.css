@@ -135,6 +135,13 @@ header,
 
 }
 
+.custom-login {
+  margin-bottom: 500px;
+}
+.footer__copyright__text {
+  text-align: center;
+}
+
 .no-button {
   background: none;
   border: none;
